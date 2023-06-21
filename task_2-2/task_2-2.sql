@@ -51,8 +51,7 @@ CREATE TABLE IF NOT EXISTS public.authors
 (
 	ID_author serial,
 	Name_author varchar(200) NOT NULL,
-	PRIMARY KEY (ID_author)
-	
+	PRIMARY KEY (ID_author)	
 );
 
 CREATE TABLE IF NOT EXISTS public.authorship
