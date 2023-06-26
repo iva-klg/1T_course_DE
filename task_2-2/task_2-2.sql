@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS public.publishing
 (
 	ID_publishing serial,
 	Name_publishing varchar(255) NOT NULL,
-	City varchar(30) NOT NULL
+	City varchar(30) NOT NULL,
 	PRIMARY KEY (ID_publishing)
 );
 
@@ -36,12 +36,12 @@ CREATE TABLE IF NOT EXISTS public.issue
 	ID_book integer,
 	Date_issue date NOT NULL,
 	Return_date date,
-	Actual_return_date date
-	PRIMARY KEY (ID_issue)
+	Actual_return_date date,
+	PRIMARY KEY (ID_issue),
 	FOREIGN KEY ID_reader
 		REFERENCES readers (ID_reader)
 		ON DELETE CASCADE
-		ON UPDATE CASCADE
+		ON UPDATE CASCADE,
 	FOREIGN KEY ID_book
 		REFERENCES books (ID_book)
 		ON DELETE CASCADE
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS public.authorship
 	ID_book integer,
 	PRIMARY KEY (ID_ authorship)
 	FOREIGN KEY ID_author
-		REFERENCES authors (ID_author)
+		REFERENCES authors (ID_author),
 	FOREIGN KEY ID_book
 		REFERENCES books (ID_book)
 		ON DELETE CASCADE
