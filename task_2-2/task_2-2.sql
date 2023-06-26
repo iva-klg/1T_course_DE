@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS public.books
 	Name_book varchar(255) NOT NULL,
 	Publication_year smallint NOT NULL,
 	Price NUMERIC (7,2) NOT NULL,
+	CHECK (Publication_year > 1800),
+	CHECK (Price > 0),
 	PRIMARY KEY (ID_book),
     FOREIGN KEY (ID_publishing)
 		REFERENCES publishing (ID_publishing)
