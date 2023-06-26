@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS public.issue
 	ID_book integer,
 	Date_issue date NOT NULL,
 	Return_date date,
+	Actual_return_date date
 	PRIMARY KEY (ID_issue)
 	FOREIGN KEY ID_reader
 		REFERENCES readers (ID_reader)
