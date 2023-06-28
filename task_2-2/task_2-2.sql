@@ -24,9 +24,9 @@ CREATE TABLE IF NOT EXISTS public.publishing
 CREATE TABLE IF NOT EXISTS public.readers 
 (
 	ID_reader serial,
-	Reader_ticket varchar(10),
-	Reader_name varchar(255),
-	Reader_Address varchar(255),
+	Reader_ticket varchar(10) NOT NULL,
+	Reader_name varchar(255) NOT NULL,
+	Reader_Address varchar(255) NOT NULL,
 	Phone_number varchar(15),
 	PRIMARY KEY (ID_reader)
 );
